@@ -21,9 +21,9 @@ export const forecastSuccess = (payload) => ({
   payload,
 });
 
-export const anyErrors = () => ({
+export const anyErrors = (error) => ({
   type: ANY_ERRORS,
-  payload: anyErrors,
+  payload: error,
 });
 
 export const setCity = (city) => ({
@@ -33,7 +33,7 @@ export const setCity = (city) => ({
 
 export const fetchWeather = (city) => {
   return async (dispatch) => {
-    dispatch(loading())
+    dispatch(loading());
     try {
       const weatherResponse = await weather.get(
         `weather?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
@@ -45,6 +45,8 @@ export const fetchWeather = (city) => {
         dispatch(weatherSeccess(weatherResponse.data));
         dispatch(forecastSuccess(forecastResponse.data));
       }
-    } catch (error) {}
+    } catch (error) {
+      dispatch(anyErrors(error));
+    }
   };
 };
