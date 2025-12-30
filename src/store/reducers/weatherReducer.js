@@ -23,12 +23,14 @@ export const weatherReducer = (state = initialState, action) => {
   } else if (action.type === wEATHER_SUCCESS) {
     return {
       ...state,
+      errors: null,
       weather: action.payload,
       loading: false,
     };
   } else if (action.type === FORECAST_SUCCESS) {
     return {
       ...state,
+      errors: null,
       forecast: action.payload,
       loading: false,
     };
@@ -36,6 +38,7 @@ export const weatherReducer = (state = initialState, action) => {
     return {
       ...state,
       errors: action.payload,
+      loading: false,
     };
   } else if (action.type === CITY) {
     return {
