@@ -42,6 +42,7 @@ export const fetchWeather = (city) => {
         `forecast?q=${city}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
       );
       if (weatherResponse && forecastResponse) {
+        dispatch(setCity(city));
         dispatch(weatherSeccess(weatherResponse.data));
         dispatch(forecastSuccess(forecastResponse.data));
       }

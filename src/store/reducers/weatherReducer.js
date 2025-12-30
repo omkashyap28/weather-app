@@ -11,7 +11,7 @@ const initialState = {
   forecast: null,
   loading: false,
   errors: null,
-  city: "delhi",
+  city: null,
 };
 
 export const weatherReducer = (state = initialState, action) => {
