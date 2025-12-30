@@ -1,16 +1,50 @@
-# React + Vite
+# 🌥 Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React + vite based weather app** that helps user to get, any city current weather conditions.
 
-Currently, two official plugins are available:
+This project uses Vite for a super-fast development experience and React for building UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Features 
 
-## React Compiler
+- Get any city weathor conditions.
+- Responsive UI for all users(desktop, mobile, tablet)
+- Uses public API for fetching (WeatherAPI)
+- Fast development with Vite hot reload.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Only for education and practice purpose.
 
-## Expanding the ESLint configuration
+## 🧰 Tack stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+| Technology     | Description                         |
+| -------------- | ----------------------------------- |
+| **React**      | UI library                          |
+| **Vite**       | Blazing fast bundler and dev server |
+| **JavaScript** | Core language                       |
+| **Tailwindcss**  | Styling|
+|**Redux**  | State management 
+|**React-Redux** | Connect app and redux store |
+|**Axios** |  HTTP client |
+
+--- 
+
+## 🚀 Getting Started
+
+``` bash
+git clone https://github.com/omkashyap28/weather-app.git
+cd weather-app
+yarn/npm i
+```
+
+## Setup your env variables
+
+1. Go to https://openweathermap.org/api
+2. Create accout and get API key
+3. create .env file in root folder
+![alt text](image.png)
+4. Add `VITE_WEATHER_API_KEY = YOUR_API_KEY` in .env file
+
+
+```bash
+  npm run dev
+```
