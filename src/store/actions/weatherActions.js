@@ -44,7 +44,7 @@ export const fetchWeather = (city) => {
       if (weatherResponse && forecastResponse) {
         dispatch(setCity(city));
         dispatch(weatherSeccess(weatherResponse.data));
-        dispatch(forecastSuccess(forecastResponse.data));
+        dispatch(forecastSuccess(forecastResponse.data.list));
       }
     } catch (error) {
       dispatch(anyErrors(error));
