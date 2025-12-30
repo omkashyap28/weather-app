@@ -41,7 +41,7 @@ yarn/npm i
 1. Go to https://openweathermap.org/api
 2. Create accout and get API key
 3. create .env file in root folder
-![alt text](image.png)
+![alt text](public/image.png)
 4. Add `VITE_WEATHER_API_KEY = YOUR_API_KEY` in .env file
 
 
